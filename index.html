@@ -1916,6 +1916,133 @@
       .btn-header-cta { display: none; }
     }
 
+    /* Responsive refinement: preserve readable content and comfortable touch targets */
+    .container > *, .hero-grid > *, .calculator-container > *, .contact-grid > *,
+    .footer-grid > *, .summary-grid > *, .trust-metrics-grid > *, .services-grid > *,
+    .steps-grid > *, .policy-accordion-grid > * { min-width: 0; }
+    .cred-data-value, .legend-val, .milestone-val, .contact-detail-text,
+    .comparison-table th, .comparison-table td { overflow-wrap: anywhere; }
+    :focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 1100px) {
+      .nav-inner { gap: 12px; }
+      .nav-links {
+        top: 100%;
+        max-height: calc(100dvh - 88px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-section { padding: 52px 0 68px; }
+      .hero-grid { gap: 32px; }
+      .section-wrap { padding: 72px 0; }
+      .section-header { margin-bottom: 36px; }
+      .summary-card { padding: 26px; }
+      .trust-metrics-grid { gap: 14px; }
+      .services-grid[style*="grid-template-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .footer-grid { gap: 30px; }
+    }
+
+    @media (max-width: 640px) {
+      html { scroll-padding-top: 82px; }
+      .container { width: min(100% - 32px, 1200px); }
+      .top-compliance-band { padding: 10px 0; }
+      .top-compliance-band .container { align-items: flex-start; }
+      .compliance-pill { max-width: 100%; white-space: normal; }
+      .nav-inner { min-height: 68px; }
+      .brand-group { gap: 9px; }
+      .brand-symbol-box { width: 40px; height: 40px; flex-basis: 40px; }
+      .brand-title { font-size: clamp(.92rem, 4vw, 1.05rem); }
+      .btn-header-cta { display: none; }
+      .menu-toggle { min-width: 44px; min-height: 44px; padding: 8px 10px; }
+      .nav-links { top: 100%; padding: 12px 20px 18px; }
+      .nav-links a { min-height: 48px; }
+      .hero-section { padding: 38px 0 48px; }
+      .hero-grid { gap: 28px; }
+      .eyebrow-pill { font-size: .67rem; letter-spacing: .08em; padding: 6px 12px; margin-bottom: 16px; }
+      .hero-title { font-size: clamp(2.25rem, 10vw, 3.3rem); margin-bottom: 16px; }
+      .hero-description { font-size: 1rem; margin-bottom: 24px; }
+      .hero-ctas { gap: 10px; margin-bottom: 24px; }
+      .hero-ctas .btn { flex: 1 1 100%; min-height: 48px; }
+      .hero-meta-strip { gap: 12px 20px; padding-top: 16px; }
+      .credential-card { padding: 24px 20px; border-radius: 24px; }
+      .cred-header { gap: 10px; margin-bottom: 20px; }
+      .cred-auth-badge { font-size: .66rem; padding: 5px 9px; }
+      .cred-entity-name { font-size: 1.35rem; }
+      .cred-grid { padding: 14px; gap: 12px 10px; }
+      .cred-data-value { font-size: .98rem; }
+      .cred-footer-note { align-items: flex-start; flex-direction: column; }
+      .executive-summary-section { padding-bottom: 34px; }
+      .summary-card { padding: 22px 18px; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; }
+      .trust-strip { padding: 22px 0 34px; }
+      .trust-metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .trust-metric-card { padding: 16px 12px; gap: 10px; }
+      .section-wrap { padding: 58px 0; }
+      .section-header { margin-bottom: 28px; }
+      .section-h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .section-lead { font-size: .98rem; }
+      .services-grid, .services-grid[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 16px; }
+      .service-card { padding: 24px 22px; }
+      .steps-grid { gap: 16px; }
+      .step-card { padding: 26px 22px; }
+      .calc-card-controls, .calc-results-card { padding: 24px 20px; border-radius: 24px; }
+      .calculator-container { gap: 18px; }
+      .calc-mode-switch { margin-bottom: 22px; }
+      .calc-tab { padding: 10px 8px; }
+      .calc-val-badge { font-size: 1rem; padding-inline: 9px; }
+      .calc-total-number { font-size: clamp(2rem, 9vw, 2.8rem); overflow-wrap: anywhere; }
+      .calc-chart-breakdown { gap: 14px; }
+      .donut-visual-wrap { width: 108px; height: 108px; flex-basis: 108px; }
+      .legend-row { gap: 8px; align-items: flex-start; flex-direction: column; }
+      .legend-val { font-size: .94rem; }
+      .calc-milestones-preview { gap: 7px; }
+      .milestone-box { padding: 9px 6px; }
+      .milestone-val { font-size: .83rem; }
+      .table-container { margin-top: 24px; border-radius: 16px; }
+      .comparison-table { min-width: 660px; font-size: .84rem; }
+      .comparison-table th, .comparison-table td { padding: 14px 16px; }
+      .faq-search-wrap { margin-bottom: 26px; }
+      .faq-search-input { padding: 13px 16px 13px 44px; font-size: .9rem; }
+      .faq-search-icon { left: 16px; }
+      .faq-category-pills { justify-content: flex-start; gap: 8px; }
+      .faq-pill-btn { padding: 8px 13px; }
+      .faq-summary { padding: 18px 18px; gap: 14px; font-size: .96rem; }
+      .faq-body { padding: 0 18px 20px; padding-top: 14px; font-size: .9rem; }
+      .contact-grid { gap: 18px; }
+      .contact-info-panel, .contact-form-panel { padding: 26px 20px; border-radius: 24px; }
+      .contact-info-title { font-size: 1.5rem; }
+      .contact-detail-row { gap: 12px; }
+      .policy-accordion-grid { gap: 14px; }
+      .policy-card { padding: 20px 18px; }
+      .site-footer { padding: 52px 0 28px; }
+      .footer-grid { gap: 28px; padding-bottom: 32px; }
+      .footer-bottom { gap: 10px; flex-direction: column; align-items: flex-start; }
+      .floating-action-group { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); gap: 8px; }
+      .floating-wa-btn { padding: 11px 14px; font-size: .82rem; }
+      .back-to-top-btn { width: 42px; height: 42px; }
+    }
+
+    @media (max-width: 420px) {
+      .container { width: min(100% - 28px, 1200px); }
+      .summary-grid { grid-template-columns: 1fr; }
+      .cred-grid { grid-template-columns: 1fr; }
+      .trust-metric-card { align-items: flex-start; flex-direction: column; }
+      .calc-chart-breakdown { align-items: flex-start; flex-direction: column; }
+      .breakdown-legend { width: 100%; }
+      .legend-row { flex-direction: row; }
+      .calc-milestones-preview { grid-template-columns: 1fr; }
+      .milestone-box { display: flex; justify-content: space-between; align-items: center; text-align: left; }
+      .cred-header { align-items: flex-start; }
+      .cred-header > div:last-child { min-width: 0; }
+      .hero-meta-strip { flex-direction: column; align-items: flex-start; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
